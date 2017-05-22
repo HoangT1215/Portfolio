@@ -11,6 +11,8 @@ Honourable Mention at Interdisciplinary Contest in Modeling 2017 <br/>
 Silver medallist at IMO 2015, Thailand <br/>
 Second Prize at Vietnam National Olympiad 2014, 2015 <br/>
 Third Prize at All-Russian Sharygin Geometry Olympiad 2013 <br/>
+## Algorithmic programming
+Top 20 ACM-ICPC Pacific Northwest qualifier <br/>
 
 # Projects
 ## Ongoing projects
@@ -22,5 +24,4 @@ Third Prize at All-Russian Sharygin Geometry Olympiad 2013 <br/>
 - WolframSpeech: A speech-to-text app that sends queries to Wolfram Alpha and return answers. This was made at HackPoly 2017.
 
 # About me
-I am currently a student at Minerva Schools at KGI, class of 2020. My academic interests are applied math (esp. financial math),
- machine learning and data science. Contact me at hoang.nguyen@minerva.kgi.edu.
+I am currently a student at Minerva Schools at KGI, class of 2020. My academic interests are applied math (esp. financial math), machine learning and data science. Contact me at hoang.nguyen@minerva.kgi.edu.
