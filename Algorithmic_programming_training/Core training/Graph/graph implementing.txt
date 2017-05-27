@@ -1,0 +1,36 @@
+Implementing graph with C++
+
+1/ Graph structures
+	a/ Adjacency matrix
+	Pros:
+	- Can determine/add edge (i,j) in O(1) time
+	Cons:
+	- Takes O(n^2) space
+	- Takes O(n^2) to add a vertex
+
+	b/ Adjacency list
+	Pros:
+	- Better graph storage (in |V| + |E|)
+	- Adding a vertex is easier
+	Cons:
+	- Takes longer to determine adjacency or adding a node
+
+2/ Algorithms
+	a/ bfs
+	b/ dfs
+	c/ Finding connected components
+	Some good insights on why using dfs to find connected components 
+	https://cs.stackexchange.com/questions/73686/why-do-we-prefer-dfs-to-find-connected-components
+
+	The algorithm: http://www.geeksforgeeks.org/connected-components-in-an-undirected-graph/
+		- Initialize all vertices as not visited.
+		- Do following for every vertex 'v'.
+       		(a) If 'v' is not visited before, call DFSUtil(v)
+       		(b) Print new line character
+
+	DFSUtil(v)
+		- Mark 'v' as visited.
+		- Print 'v'
+		- Do following for every adjacent 'u' of 'v'. If 'u' is not visited, then recursively call DFSUtil(u)
+
+	With this algorithm, it is preferred to set up an adjacency list rather the matrix one, because it is more natural to iterate through adjacent vertices.
