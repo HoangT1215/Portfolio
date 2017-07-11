@@ -1,0 +1,42 @@
+Knowledge map
+
+a) Designing algorithm
+- Backtrack
+- Recursive
+- Divide and conquer
+- Dynamic programming
+
+b) Search algorithm
+- bfs and dfs
+- Binary search
+
+c) Data structure
+- Heap
+- Binary search tree
+	- Centroid decomposition
+- Fenwick tree (BIT)
+- RMQ & LCA
+- Sqrt decomposition
+- Segment tree
+- DSU
+- Suffix array
+- Palindrome tree
+
+d) Graph
+- Graph implementation
+- Graph algorithm
+	- Matching
+	- Maximum flow
+	- 2-SAT
+	- Shortest path
+	- Kruskal
+	- Prim
+
+e) Geometry
+f) Linear algebra
+- FFT
+
+Learning plan:
+- Algorithm design (done)
+- Search algorithm: bfs and dfs (done)
+- Data structure

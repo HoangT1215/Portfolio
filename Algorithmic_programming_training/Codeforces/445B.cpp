@@ -1,75 +1,44 @@
-/* unfinished */
-
 #include<iostream>
 #include<stdio.h>
 #include<math.h>
 #include<cstdlib>
 #include<algorithm>
+#include<list>
+#include<vector>
+#include<iomanip> // to set precision
 
 using namespace std;
 
 /* Calculating the number of connected components in a graph */
 
-class AdjacencyMatrix
-{
-    private:
-        int n;
-        int **adj;
-        bool *visited;
-    public:
-        AdjacencyMatrix(int n)
-        {
-            this->n = n;
-            visited = new bool [n];
-            adj = new int* [n];
-            for (int i = 0; i < n; i++)
+vector <int> g[50];
+bool u[50]; // visited boolean
+int n,m,i, origin, dest, connected_component = 0, z = 0;
+
+void dfs(int i){
+    u[i]=true; // mark as visited
+    z++; // counting nodes in the connected component
+    for(int j=0;j<g[i].size() /* g[i].size() is the degree of vertex i */;j++){
+        if(!u[g[i][j]]) // if the j-th adjacent vertex of i isn't visited
             {
-                adj[i] = new int [n];
-                for(int j = 0; j < n; j++)
-                {
-                    adj[i][j] = 0;
-                }
+                dfs(g[i][j]);
             }
-        }
-        /*
-         * Adding Edge to Graph
-         */ 
-        void add_edge(int origin, int destin)
-        {
-            if( origin > n || destin > n || origin < 0 || destin < 0)
-            {   
-                cout<<"Invalid edge!\n";
-            }
-            else
-            {
-                adj[origin - 1][destin - 1] = 1;
-            }
-        }
-        /*
-         * Print the graph
-         */ 
-        void display()
-        {
-            int i,j;
-            for(i = 0;i < n;i++)
-            {
-                for(j = 0; j < n; j++)
-                    cout<<adj[i][j]<<"  ";
-                cout<<endl;
-            }
-        }
-        
-};
+    }
+}
 
 int main(){
-	int n,m,i, origin, dest;
-	int g[50][50]; /* Adjacency matrix implementation */
 	cin >> n >> m; /* n is no more than 50, so a O(n^3) algorithm is possible */
-	AdjacencyMatrix am(n);
 	for (i = 1; i <= m; i++){
 		cin >> origin >> dest;
-		am.add_edge(origin, dest);
+        g[origin].push_back(dest); // adjacency list
+        g[dest].push_back(origin);
 	}
 	/* Finished init graph, now onto dfs */
-
+    for (i = 1; i <= n; i++){
+        if (not u[i]){
+            dfs(i);
+            connected_component += 1;
+        }
+    }
+    std::cout << std::setprecision(20) << pow(2, n-connected_component) << '\n';
 }

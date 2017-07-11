@@ -1,4 +1,4 @@
-/* practice dfs */
+// dfs on tree, time limit O(nlogn)
 
 #include<iostream>
 #include<stdio.h>
@@ -9,35 +9,33 @@
 #include<vector>
 
 using namespace std;
-
-int n,m,i,x,y,z = 0;
+int n,i,x,y;
+int c[10000];
 vector <int> g[111];
 bool u[111]; // visited boolean
 
 void dfs(int i){
 	u[i]=true; // mark as visited
 	z++; // counting nodes in the connected component
-	for(int j=0;j<g[i].size() /* g[i].size() is the degree of vertex i */;j++){
-		if(!u[g[i][j]]) // if the j-th adjacent vertex of i isn't visited
+	for(int j=0;j<g[i].size();j++){
+		if(!u[g[i][j]]) 
 			{
 				dfs(g[i][j]);
 			}
 	}
 }
-int main()
-{
-	cin >>n >> m;
-	for(int i=0;i<m;i++)
-	{
-		cin>>x>>y;
+
+int main(){
+	cin >> n;
+	for (i = 1; i < n; i++){
+		cin >> x >> y;
 		g[x].push_back(y); // adjacency list
 		g[y].push_back(x);
 	}
-	if(n!=m){cout<<"NO";return 0;}
-		dfs(1);
-	if(z==n){
-		cout<<"FHTAGN!";
-	} 
-	else cout<<"NO";
-	return 0;
+	for (i = 1; i < n+1; i++){
+		cin >> c[i];
+	}
+	// first, we need to find the root vertex
+	
+
 }
