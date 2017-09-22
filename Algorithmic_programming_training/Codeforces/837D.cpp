@@ -8,6 +8,8 @@
 #include<list>
 #include<vector>
 
+using namespace std;
+
 std::vector <long long> a[210];
 
 int main(){

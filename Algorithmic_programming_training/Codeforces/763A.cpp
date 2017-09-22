@@ -9,33 +9,47 @@
 #include<vector>
 
 using namespace std;
-int n,i,x,y;
+int n,x,y,cut = 0,index = 2;
 int c[10000];
 vector <int> g[111];
-bool u[111]; // visited boolean
+bool u[111],annoyed = false; // visited boolean
 
 void dfs(int i){
 	u[i]=true; // mark as visited
-	z++; // counting nodes in the connected component
 	for(int j=0;j<g[i].size();j++){
-		if(!u[g[i][j]]) 
+		if ((!u[g[i][j]]) and (i != 1)) 
 			{
-				dfs(g[i][j]);
+				if (c[g[i][j]] == c[i]) dfs(g[i][j]);
+				else{
+					annoyed = true;
+					cut++;
+					break;
+				}
 			}
 	}
 }
 
 int main(){
 	cin >> n;
-	for (i = 1; i < n; i++){
+	for (int i = 1; i < n; i++){
 		cin >> x >> y;
 		g[x].push_back(y); // adjacency list
 		g[y].push_back(x);
 	}
-	for (i = 1; i < n+1; i++){
+	for (int i = 1; i < n+1; i++){
 		cin >> c[i];
 	}
-	// first, we need to find the root vertex
-	
-
+	for (int i = 0; i < g[1].size(); i++){
+		annoyed = false;
+		if (!u[g[1][i]]){
+			dfs[g[1][i]];
+			if (annoyed) index = g[1][i];
+		}
+	}
+	if (cut == 0){
+		cout << "YES" << endl;
+		cout << index;
+	} else {
+		cout << "NO";
+	}
 }

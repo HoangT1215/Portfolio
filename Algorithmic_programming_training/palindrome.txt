@@ -1,0 +1,28 @@
+1/ Check if a string is a palindrome
+A code with two pointers idea:
+
+#
+function is_palindrome(s : string) : boolean;
+
+var i, j : integer;
+
+begin
+     i := 1;
+     j := length(n);
+     while (i<j) 
+        begin
+               if s[i] <> s[j] then exit(false);  
+               inc(i);
+               dec(j);
+        end;
+     exit(true);
+end;
+#
+
+2/ Longest palindrome subsequence
+a/ DP solution
+Let F[i,j] be a boolean table that denotes whether the interval [i,j] has a palindrome. We have a dp formula as following:
+- F[i,i] = true
+- F[i,j] = F[i+1, j-1] if s[i] = s[j]
+- F[i,j] = false if s[i] <> s[j]
+
