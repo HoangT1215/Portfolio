@@ -1,5 +1,7 @@
 #DAG topological ordering --- here we assumed the graph is DAG
 
+import numpy as np
+
 def dfs(v):
 	if visited[v]:
 		return
@@ -9,13 +11,11 @@ def dfs(v):
 
 if __name__ == "__main__":
 	n, m = int(input().split())	# number of nodes and edges respectively
-	out = np.zeros(n)
 	visited = np.zeros(n)
 	adj_list = [[] for v in range(n)]
 	for i in range(m):
 		a, b = int(input().split())
 		adj_list[a].append(b)
-		out[b] += 1
 		edge_count[a] += 1
 	l = []
 
