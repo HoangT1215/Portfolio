@@ -2,18 +2,21 @@
 This is the portfolio of my works, including academic papers, designs and codes
 
 # Skills and expertise
-Programming languages: Python/Django, C++, HTML/CSS, jQuery, SQL <br/>
-7 years of high level mathematics, math, finance & physics modeling. <br/>
+- Programming languages: Python/Django, C++, HTML/CSS, jQuery, SQL <br/>
+- 7 years of high level mathematics, math, finance & physics modeling. <br/>
 
 # Awards and achievements
 ## Mathematics
-Honourable Mention at Interdisciplinary Contest in Modeling 2017 <br/>
-Silver medallist at IMO 2015, Thailand <br/>
-Second Prize at Vietnam National Olympiad 2014, 2015 <br/>
-Third Prize at All-Russian Sharygin Geometry Olympiad 2013, Dubna, Russia <br/>
+- Honourable Mention at Interdisciplinary Contest in Modeling 2017 <br/>
+- Silver medallist at IMO 2015, Thailand <br/>
+- Second Prize at Vietnam National Olympiad 2014, 2015 <br/>
+- Third Prize at All-Russian Sharygin Geometry Olympiad 2013, Dubna, Russia <br/>
+
+## Physics
+- Silver Medal at the University Physics Challenge 2017
 
 ## Algorithmic programming
-Top 20 ACM-ICPC Pacific Northwest qualifier 2016 <br/>
+- Top 20 ACM-ICPC Pacific Northwest qualifier 2016 <br/>
 
 # Projects
 ## Ongoing projects
